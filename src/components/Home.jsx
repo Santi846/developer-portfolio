@@ -1,7 +1,9 @@
+import "../assets/Home.css";
+
 function Home() {
     return (
       <>
-      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ratione adipisci vero, mollitia, voluptatibus amet nisi aut neque molestias ab cupiditate ex. Esse sint quo, doloremque ad veniam dolore sed?</div>
+      <div className="paragraph">Hi, I am a Software Developer, but I am focused on Web Development.</div>
       </>
     );
   }
