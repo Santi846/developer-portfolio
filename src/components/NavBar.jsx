@@ -13,7 +13,8 @@ function NavbarComponent() {
           <Nav className="me-auto">
             <Nav.Link href="#home" className="navbarLink">Home</Nav.Link>
             <Nav.Link href="#projects" className="navbarLink">Projects</Nav.Link>
-            <Nav.Link href="#skills" className="navbarLink">Skills </Nav.Link>
+            <Nav.Link href="#skills" className="navbarLink">Skills</Nav.Link>
+            <Nav.Link href="#skills" className="navbarLink">Contact me</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

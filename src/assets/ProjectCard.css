@@ -41,3 +41,8 @@
   .project-card:last-child {
     margin-right: 0; /* Remove margin from the last card to prevent extra spacing */
   }
+
+  .projectCardImage {
+    width: 100%; /* Set the image width to 100% of its container */
+    height: auto; /* Allow the image height to adjust proportionally */
+  }

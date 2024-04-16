@@ -1,3 +1,30 @@
 .projectsContainer{
     display: flex;
 }
+
+.repositoriesLink{
+    position: relative;
+    font-size: 18px;
+    color:#fff;
+    font-weight: 500;
+    text-decoration: none;
+    /* left: 40rem; */
+    top:1rem;
+    right:1rem;
+    margin-left: 40px;
+}
+
+.repositoriesLink::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background:#fff;
+    transition: 0.7s;
+}
+
+.repositoriesLink:hover::before{
+    width: 100%;
+}  
