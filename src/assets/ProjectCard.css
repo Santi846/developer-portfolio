@@ -33,6 +33,10 @@
     padding: 20px;
     margin: 0;
   }
+
+  .overlay div {
+    color: #fff;
+  }
   
   .project-card {
     margin-right: 20px; /* Adjust this value as needed */

@@ -26,6 +26,7 @@ function ProjectCard(prop) {
                 <a class="overlay" href={prop.link} target="_blank" rel="noopener noreferrer">
                     <h3>{prop.name}</h3>
                     <p>{prop.description}</p>
+                    <div>{prop.tech}</div>
                 </a>
             </div>
         </div>

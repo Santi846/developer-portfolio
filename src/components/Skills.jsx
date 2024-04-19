@@ -4,6 +4,7 @@ import '../assets/skills.css';
 function Skills() {
   return (
     <>
+    <div className="skillsWrapper">
     <div className="skillsContainer">
       <h3 className="skillsTitle">Skills</h3>
         <ul>
@@ -15,7 +16,8 @@ function Skills() {
           <li>Git + GitHub</li>
         </ul>
     </div>
-    
+    <div className="skillsBackground"></div>
+    </div>
     </>
   );
 }

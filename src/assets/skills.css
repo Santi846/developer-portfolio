@@ -1,6 +1,25 @@
+.skillsWrapper {
+    height: auto;
+  }
+
 .skillsContainer {
     margin-top: 5rem;
-    background-image: url('../images/guantelete_infinito.png'); /* Path to your background image */
-    background-size: cover; /* Adjusts the background image to cover the entire container */
-    background-position: center; /* Centers the background image */
+    background-image: url('../images/infinitoChiquito.png');
+    /* background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    height: auto;  */
 }
+
+.skillsBackground {
+    /* background-image: url('../images/infinitoChiquito.png'); */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    visibility: hidden !important;
+  }
+  
+  .showBackground .skillsBackground {
+    visibility: visible !important;
+  }

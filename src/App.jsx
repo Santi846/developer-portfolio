@@ -8,12 +8,28 @@ import Contact from './components/Contact';
 
 function App() {
 
+  const [showBackground, setShowBackground] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const projectsOffsetTop = document.getElementById('projects').offsetTop;
+      const skillsOffsetTop = document.getElementById('skills').offsetTop;
+
+      setShowBackground(scrollTop > projectsOffsetTop && scrollTop < skillsOffsetTop);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       <NavbarComponent></NavbarComponent>
       <Home></Home>
-      <Projects></Projects> 
-      <Skills></Skills>
+      <Projects id="projects"></Projects> 
+      <div className={showBackground ? 'showBackground' : ''}></div>
+      <Skills id="skills"></Skills>
       <Contact></Contact>
     </>
   )
