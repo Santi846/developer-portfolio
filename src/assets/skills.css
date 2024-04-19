@@ -1,3 +1,6 @@
-.skillsContainer{
+.skillsContainer {
     margin-top: 5rem;
+    background-image: url('../images/guantelete_infinito.png'); /* Path to your background image */
+    background-size: cover; /* Adjusts the background image to cover the entire container */
+    background-position: center; /* Centers the background image */
 }

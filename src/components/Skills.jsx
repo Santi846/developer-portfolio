@@ -1,4 +1,5 @@
 import '../assets/skills.css';
+// import backgroundImage from '../images/guantelete_infinito.png';
 
 function Skills() {
   return (
