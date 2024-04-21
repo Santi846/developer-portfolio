@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.appContainer {
+  background-image: url('./images/infinitoChiquito.png');
+  /* background-size: contain; */
+  background-size: 45%;
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-position: center; /* Center the background image */
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
