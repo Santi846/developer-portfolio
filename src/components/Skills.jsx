@@ -1,37 +1,36 @@
 import '../assets/skills.css';
 
+const skills = [
+  { name: 'Javascript, React + Vite and MUI', dataText: 'React' },
+  { name: 'PHP, Laravel + Eloquent', dataText: 'PHP' },
+  { name: 'MySQL, SQL Server', dataText: 'MySQL' },
+  { name: 'C#, .Net', dataText: 'C#' },
+  { name: 'Docker', dataText: 'Docker' },
+  { name: 'Git + GitHub', dataText: 'Git' },
+];
+
+const skillClassMapping = {
+  React: 'react',
+  PHP: 'php',
+  MySQL: 'mysql',
+  'C#': 'csharp',
+  Docker: 'docker',
+  Git: 'git',
+};
+
 function Skills() {
   return (
     <>
       <div className="skillsWrapper">
         <div className="skillsContainer">
           <h3 className="skillsTitle">Skills</h3>
-          <ul>
-            <li>
-              Javascript, React + Vite and MUI
-              <span className="skillCircle react"></span>
-            </li>
-            <li>
-              PHP, Laravel + Eloquent
-              <span className="skillCircle php"></span>
-            </li>
-            <li>
-              MySQL, SQL Server
-              <span className="skillCircle mysql"></span>
-            </li>
-            <li>
-              C#, .Net
-              <span className="skillCircle csharp"></span>
-            </li>
-            <li>
-              Docker
-              <span className="skillCircle docker"></span>
-            </li>
-            <li>
-              Git + GitHub
-              <span className="skillCircle git"></span>
-            </li>
-          </ul>
+            {skills.map((skill, index) => (
+              <span
+              // className={`skillCircle ${skill.dataText.toLowerCase()}`}
+              className={`skillCircle ${skillClassMapping[skill.dataText]}`}
+              data-text={skill.dataText}
+            ></span>
+            ))}
         </div>
         <div className="skillsBackground"></div>
       </div>

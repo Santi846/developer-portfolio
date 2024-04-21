@@ -25,38 +25,62 @@
   z-index: 1;
 }
 
+.skillCircle::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.skillCircle:hover::after {
+  opacity: 1;
+}
+
 .react {
   background-color: #61dafb;
   top: 12.7rem;
   left: 17.8rem;
+
 }
 
 .php {
   background-color: #e48e00;
   top: 17.2rem;
   left: 15.8rem;
+
 }
 
 .mysql {
   background-color: #00ff40;
   top: 16.4rem;
   left: 68%;
+
 }
 
 .csharp {
-  background-color: #7f5ab6;
-  top: 12.4rem;
-  left: 21.1rem;
+  background-color: #7f5ab6 !important;
+  top: 12.5rem !important;
+  left: 21.2rem !important;
 }
 
 .docker {
   background-color: #ffff00;
   top: 13rem;
   left: 14.3rem;
+
 }
 
 .git {
   background-color: #f05032;
   top: 13.5rem;
   left: 30%;
+
 }
