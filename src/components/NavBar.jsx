@@ -11,10 +11,10 @@ function NavbarComponent() {
         <Navbar.Brand href="#home" id="title">Santiago Arocha's Portfolio</Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className="navbarLink">Home</Nav.Link>
+            <Nav.Link href="#homeParagraph" className="navbarLink">Home</Nav.Link>
             <Nav.Link href="#projects" className="navbarLink">Projects</Nav.Link>
-            <Nav.Link href="#skills" className="navbarLink">Skills</Nav.Link>
-            <Nav.Link href="#skills" className="navbarLink">Contact me</Nav.Link>
+            <Nav.Link href="#mySkills" className="navbarLink">Skills</Nav.Link>
+            <Nav.Link href="#findMe" className="navbarLink">Find me</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

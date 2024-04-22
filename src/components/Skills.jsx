@@ -3,7 +3,7 @@ import '../assets/skills.css';
 const skills = [
   { name: 'Javascript, React + Vite and MUI', dataText: 'React' },
   { name: 'Laravel + Eloquent', dataText: 'Laravel' },
-  { name: 'MySQL, SQL Server', dataText: 'MySQL' },
+  { name: 'MySQL, SQL Server', dataText: 'SQL' },
   { name: 'C#, .Net', dataText: 'C#' },
   { name: 'Docker', dataText: 'Docker' },
   { name: 'Git + GitHub', dataText: 'Git' },
@@ -12,7 +12,7 @@ const skills = [
 const skillClassMapping = {
   React: 'react',
   Laravel: 'php',
-  MySQL: 'mysql',
+  SQL: 'mysql',
   'C#': 'csharp',
   Docker: 'docker',
   Git: 'git',
@@ -23,7 +23,8 @@ function Skills() {
     <>
       <div className="skillsWrapper">
         <div className="skillsContainer">
-          <h3 className="skillsTitle">Skills</h3>
+          <h3 className="skillsTitle" id="mySkills">My Skills</h3>
+          <p>For more information, get my CV</p>
             {skills.map((skill, index) => (
               <span
               // className={`skillCircle ${skill.dataText.toLowerCase()}`}

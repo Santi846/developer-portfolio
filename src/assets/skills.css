@@ -22,8 +22,9 @@
 .skillCircle {
   display: inline-block;
   width: 20px;
-  height: 20px;
+  height: 25px;
   border-radius: 50%;
+  border: 3px solid #ffff;
   position: absolute;
   z-index: 1;
 }
