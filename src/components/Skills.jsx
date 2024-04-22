@@ -2,7 +2,7 @@ import '../assets/skills.css';
 
 const skills = [
   { name: 'Javascript, React + Vite and MUI', dataText: 'React' },
-  { name: 'PHP, Laravel + Eloquent', dataText: 'PHP' },
+  { name: 'Laravel + Eloquent', dataText: 'Laravel' },
   { name: 'MySQL, SQL Server', dataText: 'MySQL' },
   { name: 'C#, .Net', dataText: 'C#' },
   { name: 'Docker', dataText: 'Docker' },
@@ -11,7 +11,7 @@ const skills = [
 
 const skillClassMapping = {
   React: 'react',
-  PHP: 'php',
+  Laravel: 'php',
   MySQL: 'mysql',
   'C#': 'csharp',
   Docker: 'docker',
