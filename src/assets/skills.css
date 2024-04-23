@@ -8,6 +8,23 @@
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .skillsContainer {
+    margin-top: 3rem;
+  }
+
+  .skillCircle {
+    width: 15px;
+    height: 20px;
+    border-width: 2px;
+  }
+
+  .skillCircle::after {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
 
 
 .skillsBackground {

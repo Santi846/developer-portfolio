@@ -48,3 +48,16 @@
 .navbarLink:hover::before{
     width: 100%;
 }  
+
+@media (max-width: 768px) {
+    #navbarContainer {
+      flex-direction: column;
+      align-items: center; /* Adjust alignment */
+    }
+  
+    .navbarLink {
+      margin: 10px 0;
+      left: auto; /* Reset left positioning */
+    }
+  }
+  

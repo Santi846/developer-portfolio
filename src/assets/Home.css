@@ -4,3 +4,9 @@
     font-style: normal;
     margin-top: 4rem;
 }
+
+@media (max-width: 768px) {
+    .paragraph {
+      font-size: 16px;
+    }
+  }

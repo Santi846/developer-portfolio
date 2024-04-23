@@ -8,7 +8,7 @@ function NavbarComponent() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container id="navbarContainer">
-        <Navbar.Brand href="#home" id="title">Santiago Arocha's Portfolio</Navbar.Brand>
+        <Navbar.Brand href="#" id="title">Santiago Arocha's Portfolio</Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#homeParagraph" className="navbarLink">Home</Nav.Link>

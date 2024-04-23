@@ -6,8 +6,15 @@
 
 .icon {
     font-size: 2em;
-    /* top: 10rem;
-    left: 50%;
-    transform: translateX(-50%); */
+  }
+
+  @media (max-width: 768px) {
+    .find {
+      margin-top: 3rem;
+    }
+  
+    .icon {
+      font-size: 1.5em;
+    }
   }
   

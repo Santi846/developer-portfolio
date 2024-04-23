@@ -1,6 +1,8 @@
-.projectsContainer{
+.projectsContainer {
     display: flex;
-}
+    flex-wrap: wrap; /* Ensure projects wrap to next line on small screens */
+    justify-content: center; /* Center projects horizontally */
+  }
 
 .repositoriesLink{
     position: relative;

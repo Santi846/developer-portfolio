@@ -39,7 +39,8 @@
   }
   
   .project-card {
-    margin-right: 20px; /* Adjust this value as needed */
+    margin: 0 10px 20px; /* Adjust margin for better spacing */
+    max-width: 300px; /* Limit max width of project cards */
   }
   
   .project-card:last-child {
