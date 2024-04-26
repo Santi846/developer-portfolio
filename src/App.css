@@ -43,13 +43,22 @@
 
 .appContainer {
   background-image: url('./images/infinitoChiquito.png');
-  /* background-size: contain; */
   background-size: 45%;
-  background-repeat: no-repeat; /* Prevent image from repeating */
-  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; 
+  background-position: center; 
   width: 100%;
   height: auto;
   min-height: 100vh;
-  margin-bottom: -10%;
+  margin-bottom: 10%;
+  /* margin-top: -2rem; */
+  padding-bottom: -6rem;
 }
 
+
+@media (max-width: 768px) {
+  .appContainer {
+    margin-top: -2rem;
+    padding-top: 1rem;
+    margin-bottom: -15rem;
+  }
+}

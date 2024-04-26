@@ -11,7 +11,7 @@ function NavbarComponent() {
         <Navbar.Brand href="#" id="title">Santiago Arocha's Portfolio</Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#homeParagraph" className="navbarLink">Home</Nav.Link>
+            <Nav.Link href="#root" className="navbarLink">Home</Nav.Link>
             <Nav.Link href="#projects" className="navbarLink">Projects</Nav.Link>
             <Nav.Link href="#mySkills" className="navbarLink">Skills</Nav.Link>
             <Nav.Link href="#findMe" className="navbarLink">Find me</Nav.Link>

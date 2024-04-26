@@ -8,33 +8,6 @@
   position: relative;
 }
 
-@media (max-width: 768px) {
-  .skillsContainer {
-    margin-top: 3rem;
-  }
-
-  .skillCircle {
-    width: 15px;
-    height: 20px;
-    border-width: 2px;
-  }
-
-  .skillCircle::after {
-    font-size: 12px;
-    padding: 4px 8px;
-  }
-}
-
-
-
-.skillsBackground {
-  background-image: url('../images/infinitoChiquito.png');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: auto;
-  margin-top: 20rem;
-}
 
 .skillCircle {
   display: inline-block;
@@ -88,8 +61,8 @@
 
 .csharp {
   background-color: #7f5ab6 !important;
-  top: 12.5rem !important;
-  left: 21.2rem !important;
+  top: 12.5rem;
+  left: 21.2rem;
 }
 
 .docker {
@@ -104,4 +77,57 @@
   top: 13.5rem;
   left: 30%;
 
+}
+
+
+@media (max-width: 768px) {
+
+  .skillsContainer {
+    margin-bottom: -5rem;
+    position: relative;
+  }
+
+  .skillCircle {
+    width: 15px;
+    height: 20px;
+    border-width: 2px;
+  }
+
+  .skillCircle::after {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .react {
+    top: 13rem; /* Increased by 1 unit */
+    left: 45%;
+}
+
+.php {
+    top: 15.5rem; /* Increased by 1 unit */
+    left: 40%;
+}
+
+.mysql {
+    top: 15.5rem; /* Increased by 1 unit */
+    left: 68%;
+}
+
+.csharp {
+    top: 13rem; /* Increased by 1 unit */
+    left: 53%;
+}
+
+.docker {
+    top: 13.5rem; /* Increased by 1 unit */
+    left: 36%;
+}
+
+.git {
+    top: 14rem; /* Increased by 1 unit */
+    left: 30%;
+}
+
+
+  
 }

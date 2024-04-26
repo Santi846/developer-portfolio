@@ -1,11 +1,13 @@
 .find{
     top: 5rem;
     left: 100%;
+    margin-top: -7rem;
 }
 
 
 .icon {
-    font-size: 2em;
+    font-size: 3em;
+    margin: 0.3rem;
   }
 
   @media (max-width: 768px) {
@@ -14,7 +16,8 @@
     }
   
     .icon {
-      font-size: 1.5em;
+      font-size: 3em;
+      margin: 0.4rem;
     }
   }
   

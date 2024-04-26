@@ -24,7 +24,7 @@ function Skills() {
       <div className="skillsWrapper">
         <div className="skillsContainer">
           <h3 className="skillsTitle" id="mySkills">My Skills</h3>
-          <p>For more information, get my CV</p>
+          <p className='cv'>For more information, view my <a href="/src/CV%20Santiago%20Arocha%20English.pdf" target="_blank" rel="noopener noreferrer">CV</a></p>
             {skills.map((skill, index) => (
               <span
               // className={`skillCircle ${skill.dataText.toLowerCase()}`}
@@ -33,7 +33,6 @@ function Skills() {
             ></span>
             ))}
         </div>
-        <div className="skillsBackground"></div>
       </div>
     </>
   );
