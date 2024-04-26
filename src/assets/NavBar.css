@@ -17,6 +17,11 @@
     align-items:center;
 }
 
+#contenedorNavbar{
+  display:flex;
+  margin-left: -5rem;
+}
+
 #title{
     font-size: 32px;
     color:#fff;
@@ -51,9 +56,12 @@
 }  
 
 @media (max-width: 768px) {
-    #navbarContainer {
+    #navbarContainer, #contenedorNavbar {
       flex-direction: column;
       align-items: center; /* Adjust alignment */
+      margin-left: 1%;
+      /* font-size: 1%  ; */
+      /* padding: -10%; */
     }
   
     .navbarLink {
