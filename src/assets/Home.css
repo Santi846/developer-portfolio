@@ -2,11 +2,23 @@
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
-    margin-top: 4rem;
+    display: flex;
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+    min-height: 100px;
+    margin-bottom: -2rem;
+    
+}
+
+.secondParagraph{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 @media (max-width: 768px) {
     .paragraph {
       font-size: 16px;
+      margin-top: 2rem;
     }
   }

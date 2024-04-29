@@ -14,7 +14,7 @@ function App() {
     <>
     <html lang={language}>
       <NavbarComponent></NavbarComponent>
-      <Home></Home>
+      <Home />
       <Projects></Projects> 
       <div className="appContainer">
       <Skills />

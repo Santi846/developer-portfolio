@@ -5,7 +5,7 @@ const skills = [
   { name: 'Laravel + Eloquent', dataText: 'Laravel' },
   { name: 'MySQL, SQL Server', dataText: 'SQL' },
   { name: 'C#, .Net', dataText: 'C#' },
-  { name: 'Docker', dataText: 'Docker' },
+  { name: 'English', dataText: 'English' },
   { name: 'Git + GitHub', dataText: 'Git' },
 ];
 
@@ -14,7 +14,7 @@ const skillClassMapping = {
   Laravel: 'php',
   SQL: 'mysql',
   'C#': 'csharp',
-  Docker: 'docker',
+  English: 'English',
   Git: 'git',
 };
 

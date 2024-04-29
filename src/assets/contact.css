@@ -10,6 +10,31 @@
     margin: 0.3rem;
   }
 
+
+#mail{
+  color:#5969db;
+  font-size: 1.5em;
+}
+
+.findContainer{
+  display: flex;
+  display: flex;
+    align-items: center; /* Vertically center the text */
+    justify-content: center;
+}
+
+.mail-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mail-icon {
+  color: #5969db;
+  font-size: 1.5em;
+  margin-right: 0.5rem; /* Add some space between the icon and the email */
+}
+
   @media (max-width: 768px) {
     .find {
       margin-top: 3rem;
