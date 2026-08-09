@@ -1,0 +1,3 @@
+# Netlify: la app es una SPA con react-router, así que cualquier ruta
+# (por ejemplo /proyectos/feeluy abierta directo o recargada) debe servir index.html.
+/*  /index.html  200

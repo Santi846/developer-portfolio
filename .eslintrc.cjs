@@ -13,6 +13,9 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react/jsx-no-target-blank': 'off',
+    // El proyecto es JSX plano y el contenido está tipado por convención en src/content;
+    // declarar propTypes en cada componente de presentación no aporta.
+    'react/prop-types': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

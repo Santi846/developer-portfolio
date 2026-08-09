@@ -1,0 +1,366 @@
+/* --------------------------------------------------------------
+   Estilos propios de cada sección.
+   -------------------------------------------------------------- */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.page-header__title {
+  font-size: 1.85rem;
+}
+
+.page-header__subtitle {
+  margin-top: 8px;
+  max-width: 62ch;
+  color: var(--text-muted);
+}
+
+/* --------------------------------- habilidades --------------------------------- */
+
+.skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skill-group__title {
+  margin-bottom: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+  gap: 12px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.skill-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Caja fija con `contain`: los logos apaisados (Spring Boot, MySQL) y los cuadrados
+   ocupan el mismo alto sin deformarse. */
+.skill-card__icon {
+  width: 64px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.skill-card__icon--empty {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-subtle);
+  color: var(--text-faint);
+  font-weight: 700;
+}
+
+.skill-card__name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* --------------------------------- proyectos --------------------------------- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card__media .media {
+  border-radius: 0;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 20px 20px;
+}
+
+.project-card__title {
+  font-size: 1.08rem;
+}
+
+.project-card__title a {
+  color: var(--text);
+}
+
+.project-card__title a:hover {
+  color: var(--accent);
+}
+
+.project-card__summary {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.project-card .button {
+  margin-top: auto;
+}
+
+/* --------------------------------- detalle de proyecto --------------------------------- */
+
+.project-detail__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.project-detail__links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-detail__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.project-detail__header h1 {
+  font-size: 1.9rem;
+}
+
+.project-detail__year {
+  padding: 3px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.project-detail__summary {
+  max-width: 70ch;
+  color: var(--text-muted);
+  font-size: 1.02rem;
+}
+
+/* --------------------------------- educación --------------------------------- */
+
+.education-row {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Sin certificado, la tarjeta ocupa todo el ancho. */
+.education-row--solo {
+  grid-template-columns: 1fr;
+}
+
+.certificate {
+  margin: 0;
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.courses__title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.courses__count {
+  color: var(--accent);
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 0.85rem;
+}
+
+.courses__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.courses__list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.courses__list li:last-child {
+  border-bottom: 0;
+}
+
+.courses__credits {
+  flex: 0 0 auto;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .education-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------- presentaciones --------------------------------- */
+
+.talks {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.talk {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+  padding: 18px;
+}
+
+.talk__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.talk__title {
+  font-size: 1.05rem;
+}
+
+.talk__title a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.talk__link-icon {
+  font-size: 0.9em;
+}
+
+.talk__year {
+  color: var(--text-faint);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.talk__description {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.talk__related {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.talk__related-label {
+  display: block;
+  color: var(--text-faint);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .talk {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------- contacto --------------------------------- */
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.contact__text {
+  max-width: 46ch;
+  color: var(--text-muted);
+  font-size: 1.02rem;
+}
+
+.contact__linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 600;
+}
+
+.contact__linkedin:hover {
+  background: var(--accent-hover);
+  color: var(--accent-contrast);
+}
+
+.contact__linkedin svg {
+  font-size: 1.5rem;
+}
