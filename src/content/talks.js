@@ -14,7 +14,7 @@ export const talks = [
     },
     year: '2023',
     educationId: 'utu-redes-software',
-    link: '', // TODO: URL de la presentación en Prezi
+    link: 'https://prezi.com/p/rujqeeg-p6kw/marrz/',
     image:
       'https://res.cloudinary.com/dmwkalfmj/image/upload/v1786247896/presentacion_tecnicatura_ukmelk.jpg',
     description: {

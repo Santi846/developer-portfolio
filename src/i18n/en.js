@@ -49,6 +49,7 @@ export default {
     inProgress: 'In progress',
     certificate: 'Certificate',
     noCertificate: 'No certificate uploaded',
+    viewCertificate: 'View certificate at full size',
     seeDetail: 'View courses',
     modalApproved: 'Passed courses',
     modalInProgress: 'Courses in progress',

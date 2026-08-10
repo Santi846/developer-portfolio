@@ -49,6 +49,7 @@ export default {
     inProgress: 'En curso',
     certificate: 'Certificado',
     noCertificate: 'Sin certificado cargado',
+    viewCertificate: 'Ver certificado en grande',
     seeDetail: 'Ver materias',
     modalApproved: 'Materias exoneradas',
     modalInProgress: 'Materias en curso',

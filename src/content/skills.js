@@ -32,7 +32,6 @@ export const technologies = [
       { name: 'Java', icon: techIcons['java'] },
       { name: 'Spring', icon: techIcons['spring'] },
       { name: 'Spring Boot', icon: techIcons['spring boot'] },
-      { name: 'C#', icon: techIcons['csharp'] },
     ],
   },
   {
@@ -89,7 +88,6 @@ export const tools = [
     items: [
       // Docker es el mismo logo que en tecnologías, así que se reutiliza el de esa carpeta.
       { name: 'Docker', icon: techIcons['docker'] },
-      { name: 'Proxmox', icon: toolIcons['proxmox'] },
       { name: 'Linux (servidores y clientes)', icon: toolIcons['linux'] },
     ],
   },

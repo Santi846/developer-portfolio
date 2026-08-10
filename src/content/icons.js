@@ -39,3 +39,12 @@ export const toolIcons = byFileName(
     import: 'default',
   }),
 );
+
+/** Fotos de títulos/certificados, usadas en `education.js`. Mismo mecanismo que los logos. */
+export const certificateImages = byFileName(
+  import.meta.glob('../certificados/*.{png,jpg,jpeg,svg,webp}', {
+    eager: true,
+    query: '?url',
+    import: 'default',
+  }),
+);

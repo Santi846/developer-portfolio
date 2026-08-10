@@ -22,16 +22,19 @@ function Talks() {
               <Media src={talk.image} alt={title} ratio="16 / 10" className="talk__media" />
 
               <div className="talk__body">
-                <h2 className="talk__title">
-                  {talk.link ? (
-                    <a href={talk.link} target="_blank" rel="noopener noreferrer">
-                      {title}
-                      <IoOpenOutline className="talk__link-icon" />
-                    </a>
-                  ) : (
-                    title
-                  )}
-                </h2>
+                {talk.link && (
+                  <a
+                    href={talk.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="talk__link-button"
+                  >
+                    {t('talks.viewPresentation')}
+                    <IoOpenOutline className="talk__link-icon" />
+                  </a>
+                )}
+
+                <h2 className="talk__title">{title}</h2>
 
                 {talk.year && <p className="talk__year">{talk.year}</p>}
                 {pick(talk.description) && <p className="talk__description">{pick(talk.description)}</p>}

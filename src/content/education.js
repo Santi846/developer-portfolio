@@ -11,6 +11,8 @@
  * exoneradas (y sus créditos) y materias en curso.
  */
 
+import { certificateImages } from './icons';
+
 export const education = [
   {
     id: 'fing',
@@ -45,7 +47,7 @@ export const education = [
     },
     start: '2021',
     end: '2023',
-    certificate: '', // TODO: foto del título (Cloudinary)
+    certificate: certificateImages['tecnicatura'],
     logo: '',
     courses: null,
   },
@@ -56,7 +58,7 @@ export const education = [
     title: 'B2 First Certificate',
     start: null, // sólo se conoce la fecha de finalización
     end: '2021-08',
-    certificate: '', // TODO: foto del certificado (Cloudinary)
+    certificate: certificateImages['first'],
     logo: '',
     courses: null,
   },
@@ -69,7 +71,7 @@ export const education = [
     },
     start: '2018',
     end: '2020',
-    certificate: '', // TODO: foto del título (Cloudinary)
+    certificate: certificateImages['bachillerato'],
     logo: '',
     courses: null,
   },

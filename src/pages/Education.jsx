@@ -51,6 +51,7 @@ function CoursesDetail({ courses }) {
 function Education() {
   const { lang, t, pick } = useLanguage();
   const [openEntry, setOpenEntry] = useState(null);
+  const [openCertificate, setOpenCertificate] = useState(null);
 
   return (
     <section className="page">
@@ -98,7 +99,23 @@ function Education() {
                 </div>
 
                 {showsCertificate && (
-                  <figure className="certificate">
+                  <figure
+                    className={`certificate ${entry.certificate ? 'is-clickable' : ''}`}
+                    onClick={entry.certificate ? () => setOpenCertificate(entry) : undefined}
+                    onKeyDown={
+                      entry.certificate
+                        ? (event) => {
+                            if (event.key === 'Enter' || event.key === ' ') {
+                              event.preventDefault();
+                              setOpenCertificate(entry);
+                            }
+                          }
+                        : undefined
+                    }
+                    role={entry.certificate ? 'button' : undefined}
+                    tabIndex={entry.certificate ? 0 : undefined}
+                    aria-label={entry.certificate ? t('education.viewCertificate') : undefined}
+                  >
                     <Media
                       src={entry.certificate}
                       alt={`${t('education.certificate')} — ${entry.institution}`}
@@ -119,6 +136,20 @@ function Education() {
         title={openEntry ? pick(openEntry.title) : ''}
       >
         {openEntry?.courses && <CoursesDetail courses={openEntry.courses} />}
+      </Modal>
+
+      <Modal
+        open={Boolean(openCertificate)}
+        onClose={() => setOpenCertificate(null)}
+        title={openCertificate ? `${t('education.certificate')} — ${openCertificate.institution}` : ''}
+      >
+        {openCertificate && (
+          <img
+            src={openCertificate.certificate}
+            alt={`${t('education.certificate')} — ${openCertificate.institution}`}
+            className="certificate-modal__image"
+          />
+        )}
       </Modal>
     </section>
   );
