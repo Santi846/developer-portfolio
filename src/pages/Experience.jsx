@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { IoInformationCircleOutline } from 'react-icons/io5';
+import Modal from '../components/Modal';
 import PageHeader from '../components/PageHeader';
 import TagList from '../components/TagList';
 import { experience } from '../content/experience';
@@ -6,6 +9,7 @@ import { formatRange } from '../utils/dates';
 
 function Experience() {
   const { lang, t, pick } = useLanguage();
+  const [openInfo, setOpenInfo] = useState(null);
 
   return (
     <section className="page">
@@ -30,9 +34,21 @@ function Experience() {
                   </p>
                 </div>
 
-                <span className="date-chip">
-                  {formatRange(job.start, job.end, lang, t('present'))}
-                </span>
+                <div className="timeline__head-actions">
+                  <span className="date-chip">
+                    {formatRange(job.start, job.end, lang, t('present'))}
+                  </span>
+                  {job.info && (
+                    <button
+                      type="button"
+                      className="icon-button"
+                      onClick={() => setOpenInfo(job)}
+                      aria-label={t('moreInfo')}
+                    >
+                      <IoInformationCircleOutline />
+                    </button>
+                  )}
+                </div>
               </div>
 
               {pick(job.description) && (
@@ -53,6 +69,16 @@ function Experience() {
           </li>
         ))}
       </ol>
+
+      <Modal open={Boolean(openInfo)} onClose={() => setOpenInfo(null)} title={openInfo ? pick(openInfo.role) : ''}>
+        {openInfo?.info && (
+          <ul className="bullets">
+            {pick(openInfo.info).map((line, index) => (
+              <li key={index}>{line}</li>
+            ))}
+          </ul>
+        )}
+      </Modal>
     </section>
   );
 }

@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { IoInformationCircleOutline } from 'react-icons/io5';
 import Media from '../components/Media';
 import Modal from '../components/Modal';
 import PageHeader from '../components/PageHeader';
+import TagList from '../components/TagList';
 import { education } from '../content/education';
 import { useLanguage } from '../context/LanguageContext';
 import { formatRange } from '../utils/dates';
@@ -52,6 +54,7 @@ function Education() {
   const { lang, t, pick } = useLanguage();
   const [openEntry, setOpenEntry] = useState(null);
   const [openCertificate, setOpenCertificate] = useState(null);
+  const [openInfo, setOpenInfo] = useState(null);
 
   return (
     <section className="page">
@@ -90,12 +93,31 @@ function Education() {
                       <h2 className="timeline__title">{pick(entry.title)}</h2>
                       <p className="timeline__meta">{entry.institution}</p>
                     </div>
-                    <span className="date-chip">
-                      {formatRange(entry.start, entry.end, lang, t('education.inProgress'))}
-                    </span>
+
+                    <div className="timeline__head-actions">
+                      <span className="date-chip">
+                        {formatRange(entry.start, entry.end, lang, t('education.inProgress'))}
+                      </span>
+                      {entry.info && (
+                        <button
+                          type="button"
+                          className="icon-button"
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            setOpenInfo(entry);
+                          }}
+                          aria-label={t('moreInfo')}
+                        >
+                          <IoInformationCircleOutline />
+                        </button>
+                      )}
+                    </div>
                   </div>
 
                   {clickable && <p className="timeline__hint">{t('education.seeDetail')} →</p>}
+
+                  {/* Las tecnologías admiten string o campo bilingüe, así que se resuelven acá. */}
+                  <TagList items={(entry.tech ?? []).map(pick)} />
                 </div>
 
                 {showsCertificate && (
@@ -149,6 +171,16 @@ function Education() {
             alt={`${t('education.certificate')} — ${openCertificate.institution}`}
             className="certificate-modal__image"
           />
+        )}
+      </Modal>
+
+      <Modal open={Boolean(openInfo)} onClose={() => setOpenInfo(null)} title={openInfo ? pick(openInfo.title) : ''}>
+        {openInfo?.info && (
+          <ul className="bullets">
+            {pick(openInfo.info).map((line, index) => (
+              <li key={index}>{line}</li>
+            ))}
+          </ul>
         )}
       </Modal>
     </section>

@@ -73,4 +73,5 @@ export default {
     pending: 'Imagen pendiente',
   },
   present: 'Actualidad',
+  moreInfo: 'Más información',
 };

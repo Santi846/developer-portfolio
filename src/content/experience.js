@@ -13,6 +13,9 @@
  *
  * En `tech` los nombres propios van como string plano. Los términos que sí se traducen
  * (arquitecturas, metodologías) van como objeto bilingüe.
+ *
+ * `info` es opcional: una lista de líneas para el modal de detalle que se abre con el
+ * botón "info" de la tarjeta. Si no está, no se muestra el botón.
  */
 
 export const experience = [
@@ -44,9 +47,34 @@ export const experience = [
       'Flutter',
       'Dart',
       'Android Studio',
+      'Docker',
       { es: 'Arquitectura de microservicios', en: 'Microservices architecture' },
       { es: 'Monolito', en: 'Monolith' },
+      'Jira',
+      'Confluence'
     ],
+    info: {
+      es: [
+        'Mantenimiento de sistema con jQuery + PHP',
+        'Implementación de microservicios desde cero, principalmente backend con Node + TypeScript',
+        'Implementaciones frontend con React + Vite',
+        'Documentación de avances, principalmente con Confluence',
+        'Registro de tareas en curso y realizadas, principalmente con Jira',
+        'Microservicios de migración de datos desde archivos CSV a bases de datos MongoDB',
+        'Microservicios de notificaciones desde backend a frontend con protocolo HTTP SSE',
+        'Desarrollo de aplicación cliente con Android Studio + Flutter + Dart',
+      ],
+      en: [
+        'Maintenance of a system built with jQuery + PHP',
+        'Implementation of microservices from scratch, mainly backend with Node + TypeScript',
+        'Frontend implementations with React + Vite',
+        'Documentation of progress, mainly with Confluence',
+        'Tracking of ongoing and completed tasks, mainly with Jira',
+        'Data migration microservices from CSV files to MongoDB databases',
+        'Notification microservices from backend to frontend using the HTTP SSE protocol',
+        'Client application development with Android Studio + Flutter + Dart',
+      ],
+    },
   },
   {
     id: 'jar-uy',
@@ -63,6 +91,18 @@ export const experience = [
     },
     bullets: [],
     tech: ['React', 'Node.js', 'MySQL'],
+    info: {
+      es: [
+        'Relevamiento de necesidades con clientes',
+        'Desarrollo de aplicación de gestión de inventario y venta para usuarios mayoristas, con frontend en React (Create React App) conectado a un backend en Node.js y base de datos MySQL, desplegados en un servidor VPS Linux',
+        'Desarrollo de aplicación de gestión de inventario y venta para usuarios de sistemas de seguridad, con frontend en React (Create React App) conectado a un backend en Node.js y base de datos MySQL, integrada con un servidor backend ERP y su base de datos SQL Server',
+      ],
+      en: [
+        'Requirements gathering with clients',
+        'Development of an inventory and sales management application for wholesale users, with a React frontend (Create React App) connected to a Node.js backend and MySQL database, deployed on a Linux VPS server',
+        'Development of an inventory and sales management application for security-systems users, with a React frontend (Create React App) connected to a Node.js backend and MySQL database, integrated with an ERP backend server and its SQL Server database',
+      ],
+    },
   },
   {
     id: 'sonda',
@@ -76,7 +116,15 @@ export const experience = [
     // TODO: agregar descripción si querés detallar el puesto.
     description: null,
     bullets: [],
-    tech: [],
+    tech: ['C#'],
+    info: {
+      es: [
+        'Se utilizaba un cliente VNC para mostrarle al usuario su dirección IP y así poder brindarla a la mesa de soporte, pero al quitar ese sistema el usuario debía ser guiado por teléfono para entrar a la consola (cmd) y ejecutar "ipconfig". Para resolverlo, desarrollé una aplicación como servicio que, al ejecutarse, muestra directamente las direcciones IP de las interfaces del equipo del usuario — proyecto GetIP.',
+      ],
+      en: [
+        'A VNC client used to be used to show the user their IP address so they could give it to the support desk, but once that system was removed the user had to be guided over the phone to open the console (cmd) and run "ipconfig". To solve this, I developed an application running as a service that, when executed, directly shows the IP addresses of the user\'s machine interfaces — the GetIP project.',
+      ],
+    },
   },
   {
     id: 'urupago',
@@ -90,6 +138,6 @@ export const experience = [
     // TODO: agregar descripción si querés detallar el puesto.
     description: null,
     bullets: [],
-    tech: ['Jira'],
+    tech: ['Jira', 'Confluence'],
   },
 ];
