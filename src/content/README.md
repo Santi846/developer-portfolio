@@ -60,4 +60,16 @@ y se muestra traducido automáticamente.
 | `education.js`   | Timeline de educación + modal de FING               |
 | `talks.js`       | Presentaciones                                      |
 
+## Detalle de un proyecto
+
+La página de detalle (`/proyectos/<slug>`) se arma con el campo `sections` de
+`projects.js`: una lista de paneles que se dibujan en el orden en que están escritos.
+Cada panel tiene su título bilingüe y una lista de `blocks`, y cada bloque se renderiza
+según su `type` — `text` (párrafos), `gallery` (carrusel con pestañas Desktop/Mobile),
+`cards` (diagramas que se abren en grande) y `links` (repos, videos, tableros).
+
+El detalle de cada tipo, con ejemplos, está en el comentario de cabecera de
+`projects.js`. Para agregar material a un proyecto no hay que tocar componentes: alcanza
+con sumar bloques ahí.
+
 Los `TODO:` marcan lo que todavía falta completar con datos reales.

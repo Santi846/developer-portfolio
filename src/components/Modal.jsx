@@ -7,7 +7,7 @@ import { useLanguage } from '../context/LanguageContext';
  * Modal centrado con el fondo desenfocado. Cierra con Escape, con el botón y
  * clickeando fuera del panel. Bloquea el scroll del body mientras está abierto.
  */
-function Modal({ open, onClose, title, children }) {
+function Modal({ open, onClose, title, children, className = '' }) {
   const { t } = useLanguage();
   const panelRef = useRef(null);
 
@@ -34,7 +34,7 @@ function Modal({ open, onClose, title, children }) {
   return createPortal(
     <div className="modal-backdrop" onClick={onClose} role="presentation">
       <div
-        className="modal-panel panel"
+        className={`modal-panel panel ${className}`}
         role="dialog"
         aria-modal="true"
         aria-label={title}

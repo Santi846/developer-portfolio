@@ -39,3 +39,7 @@ export const talks = [
     },
   },
 ];
+
+export function findTalk(id) {
+  return talks.find((talk) => talk.id === id);
+}

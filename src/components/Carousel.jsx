@@ -3,8 +3,13 @@ import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
 import Media from './Media';
 import { useLanguage } from '../context/LanguageContext';
 
-/** Carrusel simple con flechas, puntos y miniaturas. */
-function Carousel({ images = [], alt = '' }) {
+/**
+ * Carrusel simple con flechas, puntos y miniaturas.
+ *
+ * `ratio` fija la proporción del escenario: las capturas se muestran enteras dentro de
+ * esa caja, así que conviene achicarla cuando las imágenes son verticales (mobile).
+ */
+function Carousel({ images = [], alt = '', ratio = '16 / 9' }) {
   const { t } = useLanguage();
   const [index, setIndex] = useState(0);
 
@@ -15,7 +20,7 @@ function Carousel({ images = [], alt = '' }) {
   return (
     <div className="carousel">
       <div className="carousel__stage">
-        <Media src={images[index]} alt={`${alt} ${index + 1}`} ratio="16 / 9" />
+        <Media src={images[index]} alt={`${alt} ${index + 1}`} ratio={ratio} />
 
         {images.length > 1 && (
           <>

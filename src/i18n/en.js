@@ -35,6 +35,8 @@ export default {
     live: 'View live',
     tech: 'Technologies used',
     gallery: 'Project images',
+    viewImage: 'View image at full size',
+    presentation: 'Presentation',
     notFound: "I couldn't find that project.",
     sections: {
       context: 'Context',

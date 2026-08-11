@@ -13,6 +13,10 @@
  * `tech` (opcional) muestra las tecnologías/temas vistos, igual que en `experience.js`.
  * `info` (opcional) es una lista de líneas para el modal de detalle que se abre con el
  * botón "info" de la tarjeta. Si no está, no se muestra el botón.
+ *
+ * `projectLink` (opcional) convierte, dentro de esas líneas, la primera aparición de
+ * `label` en un enlace hacia `/proyectos/<slug>` — así "FeelUy" en el texto lleva al
+ * detalle del proyecto en el portafolio.
  */
 
 import { certificateImages } from './icons';
@@ -81,6 +85,7 @@ export const education = [
         'Learning of web development, client-server architecture, security and information gathering. Final project: FeelUy.',
       ],
     },
+    projectLink: { label: 'FeelUy', slug: 'feeluy' },
   },
   {
     // TODO: si preferís que figure el instituto donde lo rendiste en vez de Cambridge, cambialo acá.

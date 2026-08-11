@@ -184,6 +184,118 @@
   font-size: 1.02rem;
 }
 
+/* Cada sección apila sus bloques (texto, carrusel, tarjetas, enlaces). */
+.project-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* El título ya trae su propio margen inferior; acá manda el `gap`. */
+.project-section .section-title {
+  margin-bottom: 0;
+}
+
+.project-section .prose {
+  max-width: 78ch;
+}
+
+.project-section__subtitle {
+  margin-bottom: 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* --------------------------------- enlaces del proyecto --------------------------------- */
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-links .button {
+  font-size: 0.84rem;
+}
+
+.project-links svg {
+  font-size: 1.05rem;
+}
+
+/* --------------------------------- galería con pestañas --------------------------------- */
+
+.project-gallery__tabs {
+  /* Las pestañas van pegadas a su carrusel: el aire lo pone el `gap` de la sección. */
+  margin-bottom: 12px;
+}
+
+/* --------------------------------- tarjetas con imagen --------------------------------- */
+
+.image-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.image-card__title {
+  font-size: 0.95rem;
+}
+
+.image-card__shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: auto;
+}
+
+.image-card__shot {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.image-card__shot .media {
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+}
+
+/* Los diagramas se ven enteros: nunca recortados por la caja. */
+.image-card__shot .media img {
+  object-fit: contain;
+}
+
+.image-card__shot:hover .media {
+  border-color: var(--accent);
+}
+
+.image-card__caption {
+  color: var(--text-faint);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.image-modal__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
 /* --------------------------------- educación --------------------------------- */
 
 .education-row {

@@ -200,6 +200,12 @@
   box-shadow: var(--shadow-lg);
 }
 
+/* Para contenido ancho: diagramas, capturas grandes. */
+.modal-panel--wide {
+  width: min(1040px, 100%);
+  max-height: 90vh;
+}
+
 .modal-panel__head {
   display: flex;
   align-items: center;

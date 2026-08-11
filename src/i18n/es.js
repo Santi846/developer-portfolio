@@ -32,8 +32,11 @@ export default {
     view: 'Ver detalle',
     back: 'Volver',
     repo: 'Ver repositorio',
+    live: 'Ver en vivo',
     tech: 'Tecnologías utilizadas',
     gallery: 'Imágenes del proyecto',
+    viewImage: 'Ver imagen en grande',
+    presentation: 'Presentación',
     notFound: 'No encontré ese proyecto.',
     sections: {
       context: 'Contexto',

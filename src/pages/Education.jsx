@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { IoInformationCircleOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 import Media from '../components/Media';
 import Modal from '../components/Modal';
 import PageHeader from '../components/PageHeader';
@@ -7,6 +8,27 @@ import TagList from '../components/TagList';
 import { education } from '../content/education';
 import { useLanguage } from '../context/LanguageContext';
 import { formatRange } from '../utils/dates';
+
+/** Convierte la primera aparición de `link.label` dentro de `text` en un enlace al proyecto. */
+function withProjectLink(text, link) {
+  if (!link) return text;
+
+  const index = text.indexOf(link.label);
+  if (index === -1) return text;
+
+  const before = text.slice(0, index);
+  const after = text.slice(index + link.label.length);
+
+  return (
+    <>
+      {before}
+      <Link to={`/proyectos/${link.slug}`} className="info-link">
+        {link.label}
+      </Link>
+      {after}
+    </>
+  );
+}
 
 /** Contenido del modal: materias exoneradas con sus créditos y materias en curso. */
 function CoursesDetail({ courses }) {
@@ -178,7 +200,7 @@ function Education() {
         {openInfo?.info && (
           <ul className="bullets">
             {pick(openInfo.info).map((line, index) => (
-              <li key={index}>{line}</li>
+              <li key={index}>{withProjectLink(line, openInfo.projectLink)}</li>
             ))}
           </ul>
         )}
