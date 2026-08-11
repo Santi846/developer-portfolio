@@ -49,6 +49,8 @@ export const experience = [
       'Android Studio',
       'Docker',
       { es: 'Arquitectura de microservicios', en: 'Microservices architecture' },
+      'RabbitMQ',
+      'Redis',
       { es: 'Monolito', en: 'Monolith' },
       'Jira',
       'Confluence'
