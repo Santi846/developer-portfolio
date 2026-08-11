@@ -63,11 +63,14 @@ export const education = [
       'Linux',
       { es: 'Servidores Microsoft', en: 'Microsoft servers' },
       { es: 'Servidores Linux', en: 'Linux servers' },
+      'Proxmox',
       'MySQL',
       'Docker',
       'Git',
       'GitHub',
       'CI/CD',
+      'Jira',
+      'Miro',
     ],
     info: {
       es: [
