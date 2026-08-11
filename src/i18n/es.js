@@ -32,7 +32,6 @@ export default {
     view: 'Ver detalle',
     back: 'Volver',
     repo: 'Ver repositorio',
-    live: 'Ver en vivo',
     tech: 'Tecnologías utilizadas',
     gallery: 'Imágenes del proyecto',
     notFound: 'No encontré ese proyecto.',

@@ -71,6 +71,7 @@ export const education = [
       'CI/CD',
       'Jira',
       'Miro',
+      'SCRUM'
     ],
     info: {
       es: [

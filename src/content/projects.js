@@ -23,8 +23,7 @@ export const projects = [
       es: 'Plataforma para explorar Montevideo armando tours personalizados según los intereses de cada visitante.',
       en: 'Platform to explore Montevideo by building custom tours based on each visitor’s interests.',
     },
-    tech: ['React', 'Laravel', 'MySQL'],
-    liveUrl: 'https://feeluy.netlify.app/',
+    tech: ['React', 'Laravel', 'MySQL','Docker','Linux','Git','GitHub','CI/CD','Jira','Miro','SCRUM'],
     repo: '', // TODO: URL del repo si es público
     year: '2024',
     detail: {
@@ -57,36 +56,7 @@ export const projects = [
       // TODO: capturas del proyecto (Cloudinary o /img/...)
       '/img/feeluy.png',
     ],
-  },
-  {
-    slug: 'salvaje-life-fitness',
-    name: 'Salvaje Life Fitness',
-    cover: '/img/salvajelifefitness.png',
-    summary: {
-      es: 'Sistema de gestión de socios e ingresos para un gimnasio, con control de pagos y administración de usuarios.',
-      en: 'Member and revenue management system for a gym, with payment control and user administration.',
-    },
-    tech: ['React', 'Laravel', 'MySQL'],
-    liveUrl: 'http://lifefitnessfrontend.javierjar.shop/',
-    repo: '', // TODO
-    year: '2024',
-    detail: {
-      context: { es: '', en: '' }, // TODO
-      problem: { es: '', en: '' }, // TODO
-      process: { es: '', en: '' }, // TODO
-      decisions: { es: '', en: '' }, // TODO
-      solution: { es: '', en: '' }, // TODO
-      result: { es: '', en: '' }, // TODO
-    },
-    gallery: [
-      '/img/salvajelifefitness.png',
-      '/img/salvajelifefitness2.png',
-      '/img/salvajelifefitness3.png',
-      '/img/salvajelifefitness4.png',
-      '/img/salvajelifefitness5.png',
-      '/img/salvajelifefitness7.png',
-    ],
-  },
+  }
 ];
 
 /** Orden en que la página de detalle muestra las secciones de `detail`. */
