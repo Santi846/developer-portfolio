@@ -19,7 +19,6 @@ export const site = {
 
 /**
  * Los PDF se sirven desde `public/cv/`, así que la ruta es absoluta desde la raíz.
- * TODO: agregar `public/cv/CV-Santiago-Arocha-ES.pdf` (todavía sólo está la versión EN).
  */
 export const cvFiles = {
   es: '/cv/CV-Santiago-Arocha-ES.pdf',
