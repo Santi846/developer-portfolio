@@ -52,6 +52,8 @@ export const experience = [
       'RabbitMQ',
       'Redis',
       { es: 'Monolito', en: 'Monolith' },
+      'Git',
+      'GitHub',
       'Jira',
       'Confluence'
     ],
@@ -65,6 +67,8 @@ export const experience = [
         'Microservicios de migración de datos desde archivos CSV a bases de datos MongoDB',
         'Microservicios de notificaciones desde backend a frontend con protocolo HTTP SSE',
         'Desarrollo de aplicación cliente con Android Studio + Flutter + Dart',
+        'Trabajo colaborativo sobre una misma base de código con Git y GitHub, integrando cambios entre ramas y resolviendo conflictos de merge junto al equipo',
+        'Testing de flujos orientados a eventos mediante un harness que emite eventos con la misma firma que los reales, replicando su llegada para validar el comportamiento que disparan en los servicios',
       ],
       en: [
         'Maintenance of a system built with jQuery + PHP',
@@ -75,6 +79,8 @@ export const experience = [
         'Data migration microservices from CSV files to MongoDB databases',
         'Notification microservices from backend to frontend using the HTTP SSE protocol',
         'Client application development with Android Studio + Flutter + Dart',
+        'Collaborative work on a shared codebase with Git and GitHub, integrating changes across branches and resolving merge conflicts together with the team',
+        'Development testing of event-driven flows using a harness that emits events with the same signature as the real ones, replicating their arrival to validate the behavior they trigger in the services',
       ],
     },
   },
@@ -115,8 +121,10 @@ export const experience = [
     location: 'Montevideo, Uruguay',
     start: '2022-09',
     end: '2024-09',
-    // TODO: agregar descripción si querés detallar el puesto.
-    description: null,
+    description: {
+      es: 'Soporte técnico en sitio para el cliente Posadas, diagnosticando y resolviendo incidencias de hardware, software y red en un entorno corporativo.',
+      en: 'On-site technical support for the client Posadas, diagnosing and resolving hardware, software and network incidents in a corporate environment.',
+    },
     bullets: [],
     tech: ['C#'],
     info: {

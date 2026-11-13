@@ -34,6 +34,97 @@
 
 export const projects = [
   {
+    slug: 'mi-cartera',
+    name: 'Mi Cartera',
+    cover: 'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794528956/login_blimnp.png', // TODO: sin capturas subidas todavia (proyecto sin frontend visual terminado)
+    summary: {
+      es: 'Plataforma de finanzas personales basada en microservicios, con clasificación de movimientos bancarios asistida por IA y un flujo end-to-end desde la carga de un estado de cuenta hasta el registro de las transacciones.',
+      en: 'Personal finance platform built on microservices, with AI-assisted classification of bank transactions and an end-to-end flow from uploading a bank statement to recording the transactions.',
+    },
+    tech: [
+      'Java',
+      'Spring Boot',
+      'Python',
+      'FastAPI',
+      'PostgreSQL',
+      'RabbitMQ',
+      'Redis',
+      'React',
+      'Docker',
+      'Microservicios',
+      'Git',
+      'GitHub',
+    ],
+    repo: '', // el repo va en la sección de abajo
+    year: '2026',
+
+    sections: [
+      {
+        id: 'descripcion',
+        title: { es: 'Descripción del proyecto', en: 'About the project' },
+        blocks: [
+          {
+            type: 'text',
+            paragraphs: {
+              es: [
+                'Mi Cartera es una plataforma personal de finanzas basada en microservicios: cuentas bancarias, transacciones, gastos fijos, metas y notificaciones, cada una como un servicio independiente detrás de un API Gateway, con un flujo que va desde la carga de un estado de cuenta en PDF hasta el registro de las transacciones ya clasificadas.',
+                'La mayoría de los servicios están construidos en Java 21 con Spring Boot, siguiendo la misma estructura por capas (api, application, domain, infrastructure). Para acelerar y estandarizar esa creación, desarrollé dos scripts propios en PowerShell: uno genera el proyecto Spring Boot desde cero vía Spring Initializr (base de datos, dependencias y configuración por ambiente incluidas) y el otro agrega el CRUD completo de una entidad —entidad, DTOs, repositorio, servicio y controller REST— respetando esas mismas convenciones.',
+                'Un servicio en Python con FastAPI se encarga de extraer los movimientos de los estados de cuenta en PDF y clasificarlos combinando reglas propias con modelos de OpenAI, antes de que el usuario los revise y confirme.',
+                'Los servicios se comunican de forma asincrónica por RabbitMQ, con reintentos, colas DLQ e idempotencia por evento para evitar registros duplicados, y toda la plataforma corre en contenedores Docker con observabilidad local (Prometheus, Grafana, Loki, Tempo y OpenTelemetry).',
+              ],
+              en: [
+                'Mi Cartera is a personal finance platform built on microservices: bank accounts, transactions, fixed expenses, goals and notifications, each as an independent service behind an API Gateway, with a flow that goes from uploading a PDF bank statement to recording the classified transactions.',
+                'Most services are built in Java 21 with Spring Boot, following the same layered structure (api, application, domain, infrastructure). To speed up and standardize that process, I built two custom PowerShell scripts: one generates the Spring Boot project from scratch through Spring Initializr (database, dependencies and per-environment configuration included), and the other adds the full CRUD for an entity —entity, DTOs, repository, service and REST controller— following those same conventions.',
+                'A Python service with FastAPI extracts the transactions from PDF bank statements and classifies them by combining custom rules with OpenAI models, before the user reviews and confirms them.',
+                'Services communicate asynchronously through RabbitMQ, with retries, DLQ queues and per-event idempotency to avoid duplicate records, and the whole platform runs in Docker containers with local observability (Prometheus, Grafana, Loki, Tempo and OpenTelemetry).',
+              ],
+            },
+          },
+          {
+            type: 'gallery',
+            groups: [
+              {
+                // Recorrido de la plataforma, en orden: registro y login, gastos fijos, cajas y
+                // cuentas, carga y procesado del estado de cuenta, observabilidad y trazabilidad,
+                // y el cierre confirmando las transacciones y actualizando el saldo.
+                label: 'Desktop',
+                images: [
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794534795/registro_guoj6t.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794528956/login_blimnp.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529010/inicio_gastos_fijos_spnclv.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529048/1_mis_cuentas_gfpimb.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529077/2_crear_caja_y_cuenta_mqanqb.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529103/3_cuenta_caja_imcjzy.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529135/5_gestion_archivos_jzlauk.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529163/6_procesando_archivo_ch7wvq.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529191/7_observabilidad_grafana_jda37h.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529314/8_trazabilidad_1_t1qk4o.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529347/8_trazabilidad_2_ruupb3.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529376/8_trazabilidad_3_ojxeur.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529409/9_confirm_transactions_t9y4cs.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529439/10_confirmar_transactions_pdeydb.png',
+                  'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794529480/11_actualiza_saldo_caja_ykgzrd.png',
+                ],
+              },
+            ],
+          },
+          {
+            type: 'links',
+            items: [
+              {
+                kind: 'github',
+                label: { es: 'Repositorio de infraestructura', en: 'Infrastructure repository' },
+                url: 'https://github.com/MI-CARTERA/mi_cartera_infra',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+
+    gallery: [], // las capturas van en el bloque `gallery` de la sección de arriba
+  },
+  {
     slug: 'feeluy',
     name: 'FeelUy',
     cover: 'https://res.cloudinary.com/dmwkalfmj/image/upload/v1786463831/web_1_tyhpix.png',
