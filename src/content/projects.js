@@ -120,6 +120,60 @@ export const projects = [
           },
         ],
       },
+
+      {
+        id: 'diagramas',
+        title: { es: 'Diagramas del sistema', en: 'System diagrams' },
+        blocks: [
+          {
+            type: 'cards',
+            items: [
+              {
+                label: { es: 'Diseño de sistema', en: 'System design' },
+                images: [
+                  {
+                    caption: '',
+                    src: 'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794745631/mi_cartera_system_design_v2_yemtdc.png',
+                  },
+                ],
+              },
+              {
+                label: { es: 'Eventos del sistema', en: 'System events' },
+                images: [
+                  {
+                    caption: '',
+                    src: 'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794702409/eventos_sqk2sg.png',
+                  },
+                ],
+              },
+              {
+                label: {
+                  es: 'Flujo de carga de estado de cuenta',
+                  en: 'Bank statement upload flow',
+                },
+                images: [
+                  {
+                    caption: '',
+                    src: 'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794702431/carga_estado_cuenta_ktk4hr.png',
+                  },
+                ],
+              },
+              {
+                label: {
+                  es: 'Observabilidad aplicada en la arquitectura',
+                  en: 'Observability applied across the architecture',
+                },
+                images: [
+                  {
+                    caption: '',
+                    src: 'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794702439/observabilidad_x6lpjm.png',
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
     ],
 
     gallery: [], // las capturas van en el bloque `gallery` de la sección de arriba
