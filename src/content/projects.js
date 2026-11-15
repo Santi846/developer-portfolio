@@ -113,7 +113,7 @@ export const projects = [
             items: [
               {
                 kind: 'github',
-                label: { es: 'Repositorio de infraestructura', en: 'Infrastructure repository' },
+                label: { es: 'Repositorio de arquitectura', en: 'Architecture repository' },
                 url: 'https://github.com/MI-CARTERA/mi_cartera_public',
               },
             ],
