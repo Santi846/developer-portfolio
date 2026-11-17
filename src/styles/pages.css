@@ -219,6 +219,7 @@
 
 .project-links .button {
   font-size: 0.84rem;
+  white-space: normal;
 }
 
 .project-links svg {
@@ -446,9 +447,15 @@
     padding-right: 0;
   }
 
+  /* El botón deja de flotar arriba a la derecha y pasa después de la descripción. */
   .talk__link-button {
     position: static;
     align-self: flex-start;
+    order: 1;
+  }
+
+  .talk__related {
+    order: 2;
   }
 }
 
@@ -483,6 +490,26 @@
 @media (max-width: 720px) {
   .talk {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header__title {
+    font-size: 1.6rem;
+  }
+
+  .project-detail__header h1 {
+    font-size: 1.65rem;
+  }
+
+  .talk {
+    padding: 14px;
+  }
+
+  .contact__linkedin {
+    width: 100%;
+    justify-content: center;
   }
 }
 

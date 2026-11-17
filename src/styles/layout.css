@@ -44,6 +44,7 @@
   top: 0;
   align-self: start;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -225,6 +226,8 @@
     z-index: 30;
   }
 
+  /* Cajón: `visibility` lo saca del foco por teclado y del lector de pantalla mientras
+     está cerrado, y la sombra sólo aparece abierto (si no, se filtra por el borde izquierdo). */
   .sidebar {
     position: fixed;
     top: 0;
@@ -233,13 +236,18 @@
     z-index: 40;
     width: min(84vw, var(--sidebar-w));
     height: 100vh;
+    height: 100dvh;
     transform: translateX(-100%);
-    transition: transform 0.22s ease;
-    box-shadow: var(--shadow-lg);
+    visibility: hidden;
+    overscroll-behavior: contain;
+    transition: transform 0.22s ease, visibility 0s linear 0.22s;
   }
 
   .layout.is-menu-open .sidebar {
     transform: translateX(0);
+    visibility: visible;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.22s ease, visibility 0s;
   }
 
   .layout.is-menu-open .layout__scrim {
@@ -257,5 +265,11 @@
 
   .layout__content {
     padding: 28px 20px 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout__content {
+    padding: 22px 16px 56px;
   }
 }

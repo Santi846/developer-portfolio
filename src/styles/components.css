@@ -16,6 +16,12 @@
   padding: 24px 26px;
 }
 
+@media (max-width: 480px) {
+  .panel {
+    padding: 18px 16px;
+  }
+}
+
 .prose p + p {
   margin-top: 14px;
 }
@@ -45,8 +51,14 @@
   border-radius: var(--radius);
   font-size: 0.88rem;
   font-weight: 600;
+  max-width: 100%;
   text-decoration: none;
   white-space: nowrap;
+}
+
+/* Los íconos de los botones no se achican cuando el texto parte en dos líneas. */
+.button svg {
+  flex: 0 0 auto;
 }
 
 .button--primary {
@@ -101,7 +113,9 @@
 
 .tab {
   padding: 7px 18px;
+  border: 0;
   border-radius: 999px;
+  background: transparent;
   color: var(--text-muted);
   font-size: 0.86rem;
   font-weight: 600;
@@ -195,6 +209,7 @@
 .modal-panel {
   width: min(640px, 100%);
   max-height: 82vh;
+  max-height: 82dvh;
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow-lg);
@@ -204,6 +219,14 @@
 .modal-panel--wide {
   width: min(1040px, 100%);
   max-height: 90vh;
+  max-height: 90dvh;
+}
+
+/* El panel ya trae su propio padding (.panel): el encabezado y el cuerpo ponen el suyo,
+   así que acá se anula para que el borde del encabezado llegue a los costados. */
+.modal-panel.panel {
+  padding: 0;
+  overflow: hidden;
 }
 
 .modal-panel__head {
@@ -222,12 +245,34 @@
 .modal-panel__body {
   padding: 20px;
   overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+@media (max-width: 480px) {
+  .modal-backdrop {
+    padding: 12px;
+  }
+
+  .modal-panel,
+  .modal-panel--wide {
+    max-height: 92vh;
+    max-height: 92dvh;
+  }
+
+  .modal-panel__head {
+    padding: 14px 16px;
+  }
+
+  .modal-panel__body {
+    padding: 16px;
+  }
 }
 
 /* --------------------------------- carrusel --------------------------------- */
 
 .carousel__stage {
   position: relative;
+  touch-action: pan-y;
 }
 
 /* Las capturas vienen con proporciones distintas: se muestran enteras, sin recortar. */
@@ -394,5 +439,27 @@
   .timeline__head {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .timeline {
+    gap: 16px;
+    padding-left: 16px;
+  }
+
+  .timeline__marker {
+    left: -23px;
+  }
+
+  .timeline__body {
+    padding: 16px;
+  }
+}
+
+/* En pantallas táctiles los botones de ícono llegan al mínimo cómodo para el dedo (44px). */
+@media (pointer: coarse) {
+  .icon-button,
+  .carousel__arrow {
+    width: 44px;
+    height: 44px;
   }
 }

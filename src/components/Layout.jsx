@@ -14,10 +14,29 @@ function Layout() {
   const mainRef = useRef(null);
 
   // Cada cambio de sección arranca desde arriba y cierra el cajón móvil.
+  // En desktop scrollea el panel <main>; en mobile scrollea la ventana, así que se resetean ambos.
   useEffect(() => {
     setMenuOpen(false);
     mainRef.current?.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0 });
   }, [pathname]);
+
+  // Con el cajón abierto, el contenido de atrás no se desplaza y Escape lo cierra.
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    };
+
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', onKeyDown);
+    };
+  }, [menuOpen]);
 
   return (
     <div className={`layout ${menuOpen ? 'is-menu-open' : ''}`}>
