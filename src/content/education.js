@@ -45,6 +45,11 @@ export const education = [
         { name: 'Programación Imperativa' },
       ],
     },
+    info: {
+      es: ['Carrera en curso. Proyecto personal para seguir mi avance en ella: Gestor de Materias FING.'],
+      en: ['Degree in progress. Personal project to track my progress through it: Gestor de Materias FING.'],
+    },
+    projectLink: { label: 'Gestor de Materias FING', slug: 'gestor-materias-fing' },
   },
   {
     id: 'utu-redes-software',

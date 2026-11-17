@@ -477,6 +477,87 @@ export const projects = [
 
     gallery: [], // las capturas viven en las secciones de arriba
   },
+  {
+    slug: 'gestor-materias-fing',
+    name: 'Gestor de Materias FING',
+    cover: 'https://res.cloudinary.com/dmwkalfmj/image/upload/v1794934803/home_page_o7mpfs.png',
+    summary: {
+      es: 'Aplicación web para seguir el avance de la carrera en la FING: materias aprobadas, créditos obtenidos frente al total para recibirse, materias en curso y equivalencias entre planes de estudio.',
+      en: 'Web app to track progress through my degree at FING: passed courses, credits earned against the total required to graduate, courses in progress and equivalences between study plans.',
+    },
+    tech: ['React', 'Vite', 'JavaScript', 'CSS Modules', 'localStorage', 'Claude Code', 'Git', 'GitHub'],
+    repo: '',
+    year: '2026',
+
+    sections: [
+      {
+        id: 'descripcion',
+        title: { es: 'Descripción del proyecto', en: 'About the project' },
+        blocks: [
+          {
+            type: 'text',
+            paragraphs: {
+              es: [
+                'Gestor de Materias FING es una aplicación de una sola pantalla para llevar el control de la carrera de Ingeniería en Computación: qué materias están aprobadas y cómo (por parciales, examen o examen libre), cuántos créditos faltan para recibirse y qué se está cursando en el semestre actual.',
+                'Un resumen muestra los créditos obtenidos, el porcentaje de avance, los créditos faltantes y una proyección de hasta dónde se llega si se aprueba todo lo que se está cursando, junto con el promedio de notas simple y ponderado por créditos. Las materias se pueden ver como tabla ordenable o agrupadas por semestre, con filtros combinables por estado, semestre, modalidad de aprobación y plan.',
+                'Como la facultad cambió de plan de estudios, cada materia puede registrar sus equivalencias con materias de planes anteriores, y el cálculo de créditos evita contar dos veces una misma materia aprobada en dos planes distintos.',
+                'Para construirlo escribí primero una especificación completa —modelo de datos, reglas de negocio, interfaz, accesibilidad y criterios de aceptación— y lo implementé con Claude Code a partir de ella, documentando cada decisión tomada ante una ambigüedad.',
+              ],
+              en: [
+                'Gestor de Materias FING is a single-screen app to keep track of my Computer Engineering degree: which courses are passed and how (through midterms, a final exam or a free exam), how many credits are left to graduate and what I am taking this semester.',
+                'A summary shows credits earned, progress percentage, remaining credits and a projection of where I would land if I pass everything in progress, along with the simple and credit-weighted grade average. Courses can be browsed as a sortable table or grouped by semester, with combinable filters by status, semester, pass type and study plan.',
+                'Since the faculty changed its study plan, each course can record its equivalences with courses from previous plans, and the credit count avoids counting the same passed course twice across two plans.',
+                'To build it I first wrote a complete specification —data model, business rules, interface, accessibility and acceptance criteria— and implemented it with Claude Code from that spec, documenting every decision made when something was ambiguous.',
+              ],
+            },
+          },
+          {
+            type: 'gallery',
+            groups: [
+              {
+                label: 'Desktop',
+                images: ['https://res.cloudinary.com/dmwkalfmj/image/upload/v1794934803/home_page_o7mpfs.png'],
+              },
+            ],
+          },
+          {
+            type: 'links',
+            items: [
+              {
+                kind: 'internal',
+                label: { es: 'Ver educación anterior', en: 'See previous education' },
+                to: '/educacion',
+              },
+            ],
+          },
+        ],
+      },
+
+      {
+        id: 'decisiones',
+        title: { es: 'Decisiones técnicas', en: 'Technical decisions' },
+        blocks: [
+          {
+            type: 'text',
+            paragraphs: {
+              es: [
+                'Está hecha con React y Vite en JavaScript, con el estado global manejado por useReducer + Context y estilos en CSS Modules sobre variables CSS, sin librerías de UI.',
+                'No tiene backend: todo se guarda en el localStorage del navegador, con un formato versionado. Si los datos guardados están corruptos, la app no se rompe: avisa, guarda una copia de respaldo y no sobrescribe nada hasta que el usuario decida. Los datos se pueden exportar e importar en JSON, reemplazando o fusionando por id.',
+                'Se pensó para usarse también desde el celular: por debajo de 640px la tabla pasa a tarjetas y los formularios ocupan toda la pantalla. Los modales y paneles laterales atrapan y devuelven el foco, y los estados se indican con texto además de color.',
+              ],
+              en: [
+                'It is built with React and Vite in JavaScript, with global state handled by useReducer + Context and styles in CSS Modules on top of CSS variables, with no UI libraries.',
+                'There is no backend: everything is stored in the browser’s localStorage using a versioned format. If the stored data is corrupted the app does not break: it warns the user, keeps a backup copy and overwrites nothing until the user decides. Data can be exported and imported as JSON, either replacing or merging by id.',
+                'It was designed to work on a phone as well: below 640px the table turns into cards and forms take up the whole screen. Modals and side panels trap and return focus, and statuses are conveyed with text, not just colour.',
+              ],
+            },
+          },
+        ],
+      },
+    ],
+
+    gallery: [],
+  },
 ];
 
 /**
